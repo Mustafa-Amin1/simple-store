@@ -1,0 +1,121 @@
+@import '../../../../shared/styles/_index.scss';
+
+#product-details {
+    height: 80vh;
+    overflow: hidden;
+
+}
+
+.product-img {
+    background-color: #E3E5FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding-block: toRem(20);
+
+    img {
+        mix-blend-mode: multiply;
+        height: toRem(400);
+        object-fit: contain;
+    }
+
+}
+
+.product-info {
+    padding-inline: toRem(63);
+    background-color: #F5F5F5;
+    height: 100%;
+
+    &_label {
+        width: toRem(55);
+        background-color: #F12B2C;
+        color: #FFFFFF;
+        font-size: toRem(9);
+        font-weight: 600;
+        padding-inline: toRem(6);
+        padding-block: toRem(2);
+        border-radius: toRem(4);
+        text-align: center;
+    }
+
+    &_title {
+        margin-block-start: toRem(12);
+        width: calc(100% - toRem(10));
+        font-size: toRem(24);
+        font-weight: 600;
+        color: #000000;
+    }
+
+    &_price {
+        font-size: toRem(24);
+        font-weight: 700;
+        color: #000000;
+        margin-block-start: toRem(12);
+    }
+
+    &_category {
+        margin-block-start: toRem(12);
+        font-size: toRem(12);
+        font-weight: 500;
+        color: #50CC98;
+        letter-spacing: 5;
+    }
+
+    &_desc {
+        margin-block-start: toRem(22);
+        width: calc(100% - toRem(10));
+
+        h6 {
+            font-size: toRem(12);
+            font-weight: 600;
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        p {
+            font-size: toRem(12);
+            font-weight: 300;
+            color: #000000;
+        }
+    }
+
+    .add-btn {
+        border: 1px solid #9DC2FF;
+        color: #9DC2FF;
+        font-size: toRem(16);
+        font-weight: 500;
+        transition: .2s;
+        background-color: white;
+        text-transform: capitalize;
+        width: toRem(173);
+
+        &:hover {
+            background-color: #828EF9;
+            color: white;
+        }
+    }
+
+}
+
+
+
+// tablet && mobile screens
+
+@media screen and (max-width:765px) {
+    #product-details {
+        height: auto;
+    }
+
+    .product-img {
+        img {
+            height: toRem(200);
+        }
+    }
+
+    .product-info {
+        padding-block: toRem(20);
+        padding-inline: toRem(20);
+
+    }
+}

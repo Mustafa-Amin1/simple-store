@@ -1,0 +1,52 @@
+@import '../../../../../../shared/styles/_index.scss';
+
+.product-card {
+    transition: .3s;
+
+    &:hover {
+        box-shadow: 10px 0px 15px lightgray;
+    }
+
+    .card-title {
+        font-size: toRem(16);
+        color: #19191D;
+        font-weight: 400;
+        @include line-clamp(3)
+    }
+
+    .card-price {
+        font-size: toRem(24);
+        color: #000000;
+        font-weight: 700;
+    }
+
+    .card-desc {
+        font-size: toRem(14);
+        color: #787885;
+        font-weight: 400;
+        margin-bottom: 5px !important;
+        @include line-clamp(3)
+    }
+
+    .add-btn {
+        border: 1px solid #9DC2FF;
+        color: #9DC2FF;
+        font-size: toRem(18);
+        font-weight: 600;
+        transition: .2s;
+        background-color: white;
+        text-transform: capitalize;
+
+        &:hover {
+            background-color: #828EF9;
+            color: white;
+        }
+    }
+
+    .card-desc,
+    .card-title,
+    .btn {
+        margin-bottom: 0;
+        margin-top: auto;
+    }
+}

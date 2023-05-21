@@ -1,0 +1,16 @@
+<div id="home-page" class="container-fluid">
+  <div class="row justify-content-between">
+    <aside class="col-md-3">
+      <!-- categories list component -->
+      <app-categories-list (filteredProductsByCategory)="getFilteredProductsByCategory($event)" />
+    </aside>
+
+    <main class="col-md-9">
+
+      <!-- products list component -->
+      <app-products-list [productsList]="productsList" />
+
+    </main>
+  </div>
+
+</div>

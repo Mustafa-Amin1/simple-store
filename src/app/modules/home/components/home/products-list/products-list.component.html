@@ -1,0 +1,7 @@
+<div id="product-list" class="container-fluid">
+    <div class="row gap-4">
+        <div *ngFor="let product of productsList" class="col-md-3">
+            <app-product-card [productInfo]="product" class="w-100  mb-3" />
+        </div>
+    </div>
+</div>

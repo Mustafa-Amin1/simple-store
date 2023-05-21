@@ -1,0 +1,20 @@
+<div id="product-details" class="position-relative " *ngIf="productInfo">
+    <div class="d-flex flex-lg-row flex-column justify-content-start position-relative px-lg-0 px-3 gap-4 h-100">
+        <div class="product-img col-lg-6 col-12 ">
+            <img [src]="productInfo?.image">
+        </div>
+        <div class="product-info col-lg-6  col-12 d-flex flex-column h-lg-100 ">
+
+            <p class="product-info_label">HotSALE</p>
+            <h1 class="product-info_title">{{productInfo?.title}}</h1>
+            <h1 class="product-info_price">{{productInfo?.price | currency}}</h1>
+            <h1 class="product-info_category">{{productInfo?.category}}</h1>
+            <div class="product-info_desc">
+                <h6>Description:</h6>
+                <p>{{productInfo?.description}}</p>
+            </div>
+            <a href="#" class="btn btn-primary add-btn mt-lg-auto ms-lg-auto mb-3">Add to cart</a>
+
+        </div>
+    </div>
+</div>
