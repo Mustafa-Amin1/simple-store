@@ -1,0 +1,20 @@
+// @import '../bootstrap-rtl/css/bootstrap.min.css';
+// @import '../../styles/bootstrap-ltr.min.css';
+
+
+
+*{
+  // text-align: left ;
+}
+
+ul {
+  padding-left: 0;
+
+  li {
+    text-align: left ;
+  }
+}
+.e-dropdownbase .e-list-item {
+  text-align: right !important;
+}
+// @import '../ltr/home-page/appnav';

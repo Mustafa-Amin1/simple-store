@@ -1,0 +1,25 @@
+@use "sass:math";
+
+// convert px to rem
+@function toRem($value) {
+    $remValue: math.div($value, 10) + rem;  
+    @return $remValue;
+}
+
+@function toRem($value) {
+    $remValue: math.div($value, 10) + rem;  
+    @return $remValue;
+}
+
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }
+  @mixin line-clamp($number) {
+    display: -webkit-box;
+    -webkit-line-clamp: $number;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+  }

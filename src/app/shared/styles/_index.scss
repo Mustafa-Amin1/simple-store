@@ -1,0 +1,28 @@
+
+@import './functions.scss' ;
+@import './variables.scss' ;
+@import './partials/animations' ;
+@import './buttons.scss' ;
+@import './angular-material.scss' ;
+
+//home page module style
+// @import '../../home-page/shared/styles.scss' ;
+
+
+.highlighted-txt {
+  color: #A58F33;
+}
+p, a{
+  text-overflow: ellipsis
+}
+
+// to set .... instead of wrap text
+.nowrap-txt {
+  white-space: wrap;
+  // width: 50px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+

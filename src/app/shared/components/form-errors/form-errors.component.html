@@ -1,0 +1,35 @@
+<div class="err" *ngIf=" control && control.touched && control.errors">
+    <div *ngIf="control.errors.required">*Required</div>
+    <div *ngIf="control.errors.maxlength">*Maximum length {{control.errors.maxlength.requiredLength}} characters
+    </div>
+    <div *ngIf="control.errors.minlength">*Minimum length {{control.errors.minlength.requiredLength}} characters
+    </div>
+
+    <div *ngIf="control.errors.email || control.errors.pattern?.requiredPattern == emailRegex">
+        *Invalid email format
+    </div>
+
+    <!-- ************** start password patterns  -->
+    <div
+        *ngIf="(getControlName(control) == 'password' || getControlName(control) == 'old_pass' )  && control.hasError('notHasCapitalCase')">
+        *Password Should contain capital letters
+    </div>
+    <div
+        *ngIf="(getControlName(control) == 'password' || getControlName(control) == 'old_pass' ) && control.hasError('notHasSmallCase')">
+        *Password Should contain small letters
+    </div>
+    <div
+        *ngIf="(getControlName(control) == 'password' || getControlName(control) == 'old_pass' ) && control.hasError('notHasNumber')">
+        *Password Should contain numbers
+    </div>
+    <div
+        *ngIf="(getControlName(control) == 'password' || getControlName(control) == 'old_pass' ) && control.hasError('notHasSpecialCharacters')">
+        *Password Should contain special characters
+    </div>
+    <!-- passowrd confirmation message -->
+    <div *ngIf="control.errors.unmatchedPasswords && control?.value ">
+        *Passwords do not match
+    </div>
+    <!-- ************** end password patterns  -->
+
+</div>

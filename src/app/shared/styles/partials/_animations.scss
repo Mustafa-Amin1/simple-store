@@ -1,0 +1,114 @@
+// start lighted btn animation style
+.btn-border-anim{
+  position: relative !important;
+}
+.btn-border-anim::before{
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  border-radius: 5px;
+  z-index: -1;
+  background-color: #A58F33;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+.btn-border-anim::after{
+  width: 60px;
+  height: 1px;
+  position: absolute;
+  content: "";
+  bottom: 0px;
+  border-radius: 5px;
+  z-index: -1;
+  background-color: #A58F33;
+  left: 0px;
+  -webkit-transition:.5s;
+  transition: .5s;
+}
+.btn-border-anim:hover {
+   border-right: solid 1px #A58F33 !important;
+   border-left: solid 1px #A58F33 !important;
+
+}
+.btn-border-anim:hover::before {
+  z-index: 10;
+  width: 100%;
+}
+.btn-border-anim:hover::after {
+  z-index: 10;
+  width: 100%;
+}
+// End lighted btn animation style
+
+// start dark btn animation style
+.dark-btn-anim , .dark-btn-anim svg{
+  transition: .5s !important;
+  -webkit-transition: .5s !important;
+  -moz-transition: .5s !important;
+  -ms-transition: .5s !important;
+  -o-transition: .5s !important;
+}
+.dark-btn-anim:hover {
+  background-color: #E0E0E2 !important;
+  color: #606060 !important;
+  cursor: pointer !important;
+  svg path, span{
+    color: #A58F33 !important;
+    fill: #A58F33 !important;
+  }
+}
+// End dark btn animation style
+
+// start see more animation
+#seeMoreBtn:hover {
+  .icon {
+    transition: .5 ease-in-out;
+    position: relative;
+    animation: seemorearrow 1s infinite;
+    -webkit-animation: seemorearrow 1s infinite;
+    -webkit-transition: .5 ease-in-out;
+    -moz-transition: .5 ease-in-out;
+    -ms-transition: .5 ease-in-out;
+    -o-transition: .5 ease-in-out;
+}
+}
+@keyframes seemorearrow {
+  0%,100% {
+   top: 0px;
+}
+50% {
+  top: 5px;
+}
+ }
+// End see more animation
+
+ // start social icons animation
+ .social_icons li:hover {
+   transition: .5s ease-in-out;
+   animation: socialanimation 1s infinite;
+   -webkit-animation: socialanimation 1s infinite;
+   -webkit-transition: .5s ease-in-out;
+   -moz-transition: .5s ease-in-out;
+   -ms-transition: .5s ease-in-out;
+   -o-transition: .5s ease-in-out;
+}
+@keyframes socialanimation {
+  0%,100% {
+   transform: scale(1);
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -ms-transform: scale(1);
+   -o-transform: scale(1);
+}
+50% {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+ }
+ // End social icons animation
