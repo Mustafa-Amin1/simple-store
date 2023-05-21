@@ -32,7 +32,6 @@ export class DashboardComponent implements OnInit {
     // this.loading=true
 
     this._http.getReq('/products').subscribe(res => {
-      console.log(res)
       // this.loading=false
       this.productsList = res
       this.dataSource = new MatTableDataSource<Product>(this.productsList)

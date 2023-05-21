@@ -35,9 +35,7 @@ export class MainLayoutComponent implements OnInit {
   }
 
   languageChanged (language: string) {
-    debugger
     this.language = language;
-    console.log(language);
     let htmlTag = document.getElementsByTagName('html')[0]
     htmlTag.setAttribute('dir', this.language =='English'? 'ltr': 'rtl' )
     htmlTag.setAttribute('lang', this.language =='English'? 'en': 'ar' )

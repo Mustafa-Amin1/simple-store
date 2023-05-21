@@ -14,7 +14,6 @@ export class AuthService {
     private router: Router) { }
 
   setUserToken(token: any) {
-    debugger;
     localStorage.setItem('userToken', token);
     this.isAuth = true;
     this.checkUserAuth();
@@ -24,7 +23,6 @@ export class AuthService {
     userObj?.role == 'admin' ? this.isAdmin = true : this.isAdmin = false;
   }
   checkUserAuth() {
-    debugger;
     if (this.getUserToken()) {
       this.isAuth = true;
       const userObj: any = this.getUserObj();

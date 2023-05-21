@@ -61,7 +61,6 @@ export class NavbarComponent implements OnInit {
   }
   public toggleMenu() {
     this.menuState = this.menuState === 'closed' ? 'opened' : 'closed';
-    console.log(this.menuState);
     let toggleBtn = document.getElementById('toggleBtn')
     let toggleBtnIcon = document.getElementById('toggleBtnIcon')
     toggleBtnIcon?.classList.toggle('active')
@@ -71,15 +70,11 @@ export class NavbarComponent implements OnInit {
 
   public changeLanguage(event:any) {
     let currentLanguage = event.target.innerText.replace(' ','')
-    console.log(currentLanguage)
     this.currentLanguage = currentLanguage == 'Arabic'? 'Arabic' : 'English'
-    console.log(this.currentLanguage)
     this.selectLanguageChange()
   }
 
   public selectLanguageChange() {
-    debugger
-    console.log(this.currentLanguage)
     let bodyTag = document.getElementsByTagName('body')[0]
 
     // change language flag src

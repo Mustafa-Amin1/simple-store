@@ -28,7 +28,6 @@ export class ProductDetailsComponent {
   getProductInfo(productId: number) {
     this._http.getReq(`/products/${productId}`).subscribe(res => {
       this.productInfo = res
-      console.log(res)
     })
   }
 

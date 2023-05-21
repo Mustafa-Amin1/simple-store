@@ -38,7 +38,6 @@ export class HomeComponent implements OnInit {
   }
 
   getFilteredProductsByCategory(products:any) {
-    console.log(products)
     this.productsList = products
   }
 
