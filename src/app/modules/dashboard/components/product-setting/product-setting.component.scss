@@ -1,0 +1,29 @@
+@import '../../../../shared/styles/_index.scss';
+
+.form-control {
+    height: 40px;
+}
+.confirm-btn {
+    border: 1px solid #9DC2FF;
+    color: #9DC2FF;
+    font-size: toRem(18);
+    font-weight: 600;
+    transition: .2s;
+    background-color:white;
+    text-transform: capitalize;
+    width: toRem(220);
+    &:hover {
+        background-color: #828EF9;
+        color: white;
+    }
+}
+.cancel-btn {
+    color: gray;
+    font-size: toRem(18);
+    font-weight: 600;
+    transition: .2s;
+    &:hover {
+        background-color: lightgray;
+        color: white;
+    }
+}

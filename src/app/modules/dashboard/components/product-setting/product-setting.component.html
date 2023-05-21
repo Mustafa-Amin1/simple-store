@@ -1,0 +1,43 @@
+<div id="products-settings" class="container">
+  <form [formGroup]="editForm" (ngSubmit)="submitEdit()">
+    <div class="row">
+
+      <div class="mb-3 input col-6">
+        <label for="title" class="form-label">Title*</label>
+        <input class="form-control" placeholder="Product Title" id="title" type="text" formControlName="title"
+          autocomplete="off" name="title" ngModel [readOnly]="loadingSubmit" minlength="4" />
+
+        <form-errors class="text-left error-message" [control]="editForm.controls['title']">
+        </form-errors>
+      </div>
+
+      <div class="mb-3 input col-6">
+        <label for="price" class="form-label">Price*</label>
+        <input [mask]="'^[+-]?([1-9]\\d*|0)?(\\.\\d\{0,2\})?$'" placeholder="Product Price" id="price" type="price"
+          formControlName="price" autocomplete="off" class="form-control" #price name="price" minlength="4"
+          [readOnly]="loadingSubmit" />
+        <form-errors class="text-left error-message" [control]="editForm.controls['price']">
+        </form-errors>
+      </div>
+
+      <div class="mb-3 input col-md-6 col-12">
+        <label for="description" class="form-label">Description*</label>
+        <textarea placeholder="Product Price" id="price" type="description" formControlName="description"
+          autocomplete="off" class="form-control" #description name="description" max="80"
+          [readOnly]="loadingSubmit"></textarea>
+        <form-errors class="text-left error-message" [control]="editForm.controls['description']">
+        </form-errors>
+      </div>
+
+    </div>
+    <div class="form-btns  mx-auto mt-5 d-flex justify-content-end col-12">
+      <button type="submit" [disabled]="loadingSubmit" class=" confirm-btn btn">
+        Confirm Changes
+        <mat-spinner *ngIf="loadingSubmit"></mat-spinner>
+      </button>
+      <button class="cancel-btn btn ms-3 " (click)="backToPrevPage()">
+        Cancel
+      </button>
+    </div>
+  </form>
+</div>
