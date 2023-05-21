@@ -1,0 +1,219 @@
+@import '../../../../shared/styles/index';
+
+#navBar {
+  padding-block: toRem(20);
+
+  @media (max-width: 765px) {
+    padding-block: toRem(10);
+  }
+
+  .navbar {
+    background: transparent !important;
+    position: relative;
+
+    button {
+      text-align: center;
+      font-size: toRem(18) !important;
+
+      .mat-badge-content {
+        width: toRem(20);
+        height: toRem(20);
+        font-size: toRem(14);
+        background-color: #F44336;
+        font-weight: 400;
+      }
+    }
+
+    li.active a {
+      color: #2264D1;
+      font-weight: bold;
+    }
+
+    a {
+      font-size: 1.6rem;
+      transition: .2s;
+      -webkit-transition: .2s;
+      -moz-transition: .2s;
+      -ms-transition: .2s;
+      -o-transition: .2s;
+      font-weight: 600;
+
+      &:hover {
+        color: #2264D1;
+      }
+    }
+
+    .navbar-brand svg {
+      width: 100px;
+      height: auto;
+    }
+
+    // .navbar_buttons {
+    //   ul {
+    //     li {
+    //       a {
+    //         color: white;
+    //         background-color: #2264D1;
+    //       }
+    //     }
+    //   }
+    // }
+
+    #menu {
+      width: 100%;
+      position: absolute;
+      top: 100%;
+      height: auto;
+      background-color: #2264D1;
+      z-index: 20;
+
+      ul {
+
+        li {
+          margin-bottom: .5rem;
+          border-bottom: 1px solid #ffffff4f;
+
+          a {
+            display: block;
+            font-size: 1.3rem;
+            color: white;
+            padding: 10px;
+            width: 100%;
+            transition: .5s;
+            -webkit-transition: .5s;
+            -moz-transition: .5s;
+            -ms-transition: .5s;
+            -o-transition: .5s;
+            margin-bottom: 1rem;
+          }
+
+        }
+      }
+    }
+  }
+
+  #menu li:hover a {
+    background: white;
+    border-radius: 15px;
+    color: #2264D1 !important;
+  }
+
+
+  //  toggle Btn
+  .ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .navbar-toggler.active {
+    background-color: #2264D1;
+  }
+
+  .hamRotate.active {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+  }
+
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+
+  .line {
+    fill: none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke: #000;
+    stroke-width: 5.5;
+    stroke-linecap: round;
+  }
+
+  .ham4 .top {
+    stroke-dasharray: 40 121;
+  }
+
+  .ham4 .bottom {
+    stroke-dasharray: 40 121;
+  }
+
+  .ham4.active .top {
+    stroke-dashoffset: -68px;
+  }
+
+  .ham4.active .bottom {
+    stroke-dashoffset: -68px;
+  }
+}
+
+
+
+// media queries
+@media (max-width: 765px) {
+  .navbar {
+    .navbar-brand {
+      width: 50%;
+    }
+
+    svg {
+      width: 50%;
+    }
+  }
+
+  .top_nav {
+    display: none;
+  }
+}
+
+
+// larg screen
+@media (min-width: 992px) {
+  #menu {
+    display: none;
+  }
+}
+
+// iPad land scape
+@media (min-width: 992px) and (max-width: 1026px) {
+  .navbar {
+    a {
+      font-size: 1.5rem !important;
+    }
+  }
+}
+
+// small screens
+@media (min-width: 768px) and (max-width: 991px) {
+  .navbar {
+    #toggleBtn {
+      height: toRem(50);
+      width: toRem(50);
+
+      svg {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .navbar {
+    .navbar_buttons {
+      display: none !important;
+    }
+
+    .navbar-toggler--wrapper {
+      display: inline-block !important;
+    }
+
+    #toggleBtn {
+      height: toRem(50);
+      width: toRem(50);
+    }
+  }
+}

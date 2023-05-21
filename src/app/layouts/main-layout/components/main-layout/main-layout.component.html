@@ -1,0 +1,15 @@
+<div class="d-flex flex-column" [dir]="language == 'English' || currentLang == 'en' ? 'ltr' : 'rtl'"
+  [ngClass]=" language == 'English' || currentLang == 'en' ? 'ltr' : 'rtl' ">
+
+
+  <!-- header -->
+  <app-navbar [language]=language (languageChanged)="languageChanged($event)"></app-navbar>
+
+  <div class="page-body w-100 pt-lg-0 pt-5">
+    <div class="relative h-100">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+
+
+</div>

@@ -1,0 +1,14 @@
+@import '../../../../shared/styles/functions.scss';
+
+.side-menu-wrapper {
+  margin-right: 1rem;
+  min-height: 100vh;
+  height: 100%;
+  position: sticky;
+  left: 0;
+  top: 0;
+  min-width: toRem(120);
+  max-width: toRem(120);
+}
+
+.page-body {}
