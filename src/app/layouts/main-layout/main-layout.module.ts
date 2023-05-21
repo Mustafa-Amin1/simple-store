@@ -24,10 +24,10 @@ import { SharedModule } from 'src/app/shared/shared.module';
     FormsModule,
     SharedModule,
     TranslateModule.forRoot({
-      defaultLanguage:"ar",
+      defaultLanguage:"en",
       loader: {
         provide: TranslateLoader,
-        useClass: TranslateFakeLoader,
+        // useClass: TranslateFakeLoader,
         useFactory: CreateTranslateLoader,
         deps: [HttpClient],
       },
@@ -39,5 +39,5 @@ export class MainLayoutModule {}
 
 //language function
 export function CreateTranslateLoader(http:HttpClient) {
-  return new TranslateHttpLoader(http,'../assets/i18n/','.json')
+  return new TranslateHttpLoader(http,'../../../assets/i18n/','.json')
 }

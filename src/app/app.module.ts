@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 //ngx translate
 import { TranslateModule, TranslateLoader, TranslateFakeLoader } from '@ngx-translate/core';
@@ -15,9 +15,9 @@ import { SimpleNotificationsModule } from 'angular2-notifications';
 
 
 // Angular material modules
-import {MatButtonModule} from '@angular/material/button';
-import {MatBadgeModule} from '@angular/material/badge';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 
 
@@ -29,16 +29,6 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    TranslateModule.forRoot({
-      defaultLanguage:"ar",
-      loader: {
-        provide: TranslateLoader,
-        useClass: TranslateFakeLoader,
-        useFactory: CreateTranslateLoader,
-        deps: [HttpClient],
-      },
-
-    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     //material modules
@@ -47,7 +37,16 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatProgressSpinnerModule,
     SimpleNotificationsModule.forRoot({
       clickIconToClose: true
-    })
+    }),
+    TranslateModule.forRoot({
+      defaultLanguage: "en",
+      loader: {
+        provide: TranslateLoader,
+        useClass: TranslateFakeLoader,
+        useFactory: CreateTranslateLoader,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -56,6 +55,6 @@ export class AppModule { }
 
 
 //language function
-export function CreateTranslateLoader(http:HttpClient) {
-  return new TranslateHttpLoader(http,'../assets/i18n/','.json')
+export function CreateTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, '../assets/i18n/', '.json')
 }

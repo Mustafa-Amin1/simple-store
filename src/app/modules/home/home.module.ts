@@ -8,9 +8,31 @@ import { CategoriesListComponent } from './components/home/categories-list/categ
 import { ProductsListComponent } from './components/home/products-list/products-list.component';
 import { ProductCardComponent } from './components/home/products-list/product-card/product-card.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClient } from '@angular/common/http';
+import { TranslateFakeLoader, TranslateLoader, TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
   declarations: [ HomeComponent, CategoriesListComponent, ProductsListComponent, ProductCardComponent, ProductDetailsComponent],
-  imports: [SharedModule, HomeRoutingModule, FormsModule, ReactiveFormsModule,],
+  imports: [SharedModule, HomeRoutingModule, FormsModule, ReactiveFormsModule,
+    TranslateModule.forRoot({
+      defaultLanguage:"en",
+      loader: {
+        provide: TranslateLoader,
+        useClass: TranslateFakeLoader,
+        useFactory: CreateTranslateLoader,
+        deps: [HttpClient],
+      },
+
+    }),
+  ],
 })
-export class HomeModule {}
+export class HomeModule {
+  
+}
+
+
+//language function
+export function CreateTranslateLoader(http:HttpClient) {
+  return new TranslateHttpLoader(http,'../../../assets/i18n/','.json')
+}

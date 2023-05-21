@@ -71,6 +71,7 @@ export class NavbarComponent implements OnInit {
     let currentLanguage = event.target.innerText.replace(' ','')
     this.currentLanguage = currentLanguage == 'Arabic'? 'Arabic' : 'English'
     this.selectLanguageChange()
+    location.reload(); 
   }
 
   public selectLanguageChange() {

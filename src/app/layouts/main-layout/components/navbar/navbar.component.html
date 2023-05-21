@@ -37,9 +37,9 @@
         {{currentLanguage == 'English'? 'Arabic' : 'English'}} 
       </button>
       <a *ngIf="!isLoggedIn" routerLink="/auth/signin"
-        class="btn text-center primary-btn fw-bolder shadow px-4 py-2 rounded-3 me-md-5"> Sign in</a>
+        class="btn text-center primary-btn fw-bolder shadow px-4 py-2 rounded-3 me-md-5"> {{'Sign_In' | translate}} </a>
       <a *ngIf="isLoggedIn" role="button" (click)="signOut()"
-        class="btn text-center primary-btn fw-bolder shadow px-4 py-2 rounded-3 me-md-5"> Sign out</a>
+        class="btn text-center primary-btn fw-bolder shadow px-4 py-2 rounded-3 me-md-5"> {{'Sign_Out' | translate}} </a>
 
       <img width="40" height="40" src="../../../../assets/images/user-place-holder.png" alt="user image" />
 
