@@ -10,8 +10,6 @@ import { ValidationService } from 'src/app/core/services/validation.service';
 export class FormErrorsComponent implements OnInit {
   @Input() control: any;
   emailRegex = this.validation.emailPattern;
-  alphaRegex = this.validation.alphaPattern;
-  numericalRegex = this.validation.numerical;
 
   passwordRegex = this.validation.passwordPattern;
 

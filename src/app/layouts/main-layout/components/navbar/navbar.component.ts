@@ -37,7 +37,6 @@ export class NavbarComponent implements OnInit {
 
   public isLoggedIn = this._auth.isUserAuth()
 
-  public currentLanguageImg = ''
   public currentLanguage = 'Arabic'
 
   constructor(
@@ -83,7 +82,6 @@ export class NavbarComponent implements OnInit {
       // change app direction
       bodyTag.classList.add('direction-rtl')
       bodyTag.classList.remove('direction-ltr')
-      this.currentLanguageImg = "../../../../assets/images/languages/iconfinder_32326_saudi_flag_arabia_arabic_icon_48px.png"
       // change app language
       this.translate.use('ar')
       localStorage.setItem('selectedLang', 'ar')
@@ -93,7 +91,6 @@ export class NavbarComponent implements OnInit {
         // change app direction
         bodyTag.classList.add('direction-ltr')
         bodyTag.classList.remove('direction-rtl')
-        this.currentLanguageImg = "../../../../assets/images/languages/iconfinder_16014_england_english_flag_great britain_inghilterra_icon_48px.png"
         // change app language
         this.translate.use('en')
         localStorage.setItem('selectedLang', 'en')
