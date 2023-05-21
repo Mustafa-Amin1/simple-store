@@ -1,0 +1,51 @@
+<div class="login-page position-relative">
+  <div class=" h-100">
+    <div class="d-flex justify-content-lg-start justify-content-center h-100">
+
+      <!-- page background -->
+      <div class="col-md-4  img d-lg-block d-none">
+        <img src="../../../../../assets/images/login-bg.png" class="img-fluid h-100 " />
+      </div>
+
+      <!-- start form  -->
+      <div
+        class="form-container d-flex flex-column align-items-center  justify-content-center px-4 rounded-5  col-md-8">
+        <div class="logo flex justify-content-center col-sm-5">
+          <img src="../../../../../assets/images/logo/logo.svg" alt="STC Logo" class="img-fluid" />
+        </div>
+
+        <form [formGroup]="loginForm" (ngSubmit)="login()" class="">
+          <div class="mb-3 input">
+            <label for="username" class="form-label">User Name*</label>
+            <input class="form-control" placeholder="User Name" id="username" type="text" formControlName="username"
+              autocomplete="off"  name="username" ngModel [readOnly]="loadingSubmit" />
+              
+            <form-errors class="text-left error-message" [control]="loginForm.controls['username']">
+            </form-errors>
+          </div>
+
+          <div class="mb-3 input">
+            <label for="password" class="form-label">Password*</label>
+            <input placeholder="Password" id="password" type="password" formControlName="password" autocomplete="off"
+              class="form-control" #password name="password" minlength="4" [readOnly]="loadingSubmit" />
+            <form-errors class="text-left error-message" [control]="loginForm.controls['password']">
+            </form-errors>
+          </div>
+
+
+          <div class="confirm-btn  mx-auto mt-5">
+            <button type="submit" [disabled]="loadingSubmit" class="btn w-100 h-100">
+              Sign In
+              <mat-spinner *ngIf="loadingSubmit"></mat-spinner>
+            </button>
+          </div>
+        </form>
+      </div>
+      <!-- End form  -->
+
+    </div>
+
+  </div>
+
+</div>
+

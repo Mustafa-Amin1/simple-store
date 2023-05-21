@@ -1,0 +1,76 @@
+@import '../../../../shared/styles/index';
+
+.login-page {
+  max-height: 100vh;
+  height: 100vh;
+
+  .img {
+    max-height: 100vh;
+    height: 100vh;
+    object-fit: contain;
+    img {
+      width: 100%;
+    }
+  }
+
+  .form-container {
+    .logo {
+      margin-bottom: toRem(82);
+      text-align: center;
+    }
+    input {
+      width: toRem(410);
+      height: toRem(60);
+      border-radius: toRem(42);
+      border: toRem(2) solid rgba(0, 0, 0, 0.49);
+      font-size: toRem(16);
+
+      &::placeholder  {
+        font-size: toRem(14);
+      }
+    }
+    label {
+      color: #6C63FF;
+      font-size: toRem(20);
+      font-weight: 700;
+    }
+    #email {
+      background: url('../../../../../assets/images/icons/ic-email.svg') no-repeat scroll toRem(12) toRem(20) ;
+      padding-left:toRem(46) !important;
+    }
+    #password {
+      background: url('../../../../../assets/images/icons/ic-password.svg') no-repeat scroll toRem(12) toRem(15)  ;
+      padding-left:toRem(46) !important;
+    }
+    .confirm-btn {
+      width: toRem(337);
+      height: toRem(54);
+      border-radius: toRem(42);
+      background-color: #6C63FF;
+     
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: .3s;
+      &:hover {
+          box-shadow: 10px 10px 10px  #a8a4fa;
+      }
+      button {
+        color: white;
+        font-weight: 700;
+        font-size: toRem(24);
+        border: transparent;
+        &:focus {
+          border: none;
+          outline: none;
+        }
+      }
+    }
+
+  }
+
+
+}
+
+
+
