@@ -34,7 +34,7 @@
     <div class="navbar_buttons col-4 d-md-flex justify-content-end align-items-center d-sm-none ">
       <button (click)="changeLanguage($event)"
         class="text-center primary-btn primary-bordered fw-bolder shadow px-4 py-2 rounded-3 me-md-5">
-        {{currentLanguage == 'English'? 'Arabic' : 'English'}} />
+        {{currentLanguage == 'English'? 'Arabic' : 'English'}} 
       </button>
       <a *ngIf="!isLoggedIn" routerLink="/auth/signin"
         class="btn text-center primary-btn fw-bolder shadow px-4 py-2 rounded-3 me-md-5"> Sign in</a>
